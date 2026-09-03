@@ -1,0 +1,707 @@
+[9:02 pm, 02/09/2026] shahrin: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solar Express Solution | Solar & Power Solutions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #263238;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            background: #ffffff;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .logo span {
+            color: #f9a825;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #263238;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #f9a825;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ffd54f;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #f9a825;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #e69500;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #607d8b;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 35px;
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #f5f9f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        /* PRODUCTS */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .product-info h3 {
+            color: #1b5e20;
+            margin-bottom: 8px;
+        }
+
+        /* WHY US */
+        .why-us {
+            background: #f5f9f5;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 25px;
+        }
+
+        .why-card h3 {
+            color: #1b5e20;
+            margin: 10px 0;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #1b5e20;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 20px;
+        }
+
+        .contact-card h3 {
+            color: #ffd54f;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d3b10;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+
+        <div class="logo">
+            Solar <span>Express</span> Solution
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Powering a <span>Brighter Future</span>
+            </h1>
+
+            <p>
+                Reliable solar energy, IPS and lighting solutions
+                for homes, businesses and industries.
+            </p>
+
+            <a href="#products" class="btn">
+                Explore Products
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="about">
+
+            <div class="about-text">
+
+                <h2>About Solar Express Solution</h2>
+
+                <p>
+                    Solar Express Solution provides reliable and
+                    efficient energy solutions designed to meet the
+                    growing power needs of homes, businesses and
+                    organizations.
+                </p>
+
+                <br>
+
+                <p>
+                    Our solutions include solar panels, IPS systems,
+                    solar lights and other energy-efficient products.
+                    We aim to make clean and dependable energy more
+                    accessible.
+                </p>
+
+            </div>
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80"
+                    alt="Solar Panels"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Complete energy solutions for your needs
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">☀️</div>
+
+                <h3>Solar Solutions</h3>
+
+                <p>
+                    Solar panel solutions for homes,
+                    offices and commercial spaces.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🔋</div>
+
+                <h3>IPS Solutions</h3>
+
+                <p>
+                    Reliable backup power solutions
+                    for uninterrupted electricity.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">💡</div>
+
+                <h3>Lighting Solutions</h3>
+
+                <p>
+                    Energy-efficient LED and solar
+                    lighting solutions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">⚙️</div>
+
+                <h3>Installation & Support</h3>
+
+                <p>
+                    Professional installation and
+                    after-sales support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="products">
+
+        <div class="section-title">
+
+            <h2>Our Products</h2>
+
+            <p>
+                Quality products for reliable energy
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80"
+                    alt="Solar Panel"
+                >
+
+                <div class="product-info">
+
+                    <h3>Solar Panels</h3>
+
+                    <p>
+                        Efficient solar panels for clean
+                        and sustainable energy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80"
+                    alt="IPS System"
+                >
+
+                <div class="product-info">
+
+                    <h3>IPS & Backup Systems</h3>
+
+                    <p>
+                        Dependable backup power systems
+                        for homes and businesses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1550985543-f47f5f2f4f4f?auto=format&fit=crop&w=700&q=80"
+                    alt="Solar Light"
+                >
+
+                <div class="product-info">
+
+                    <h3>Solar Lights</h3>
+
+                    <p>
+                        Modern and energy-saving lighting
+                        solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us">
+
+        <div class="section-title">
+
+            <h2>Why Choose Us?</h2>
+
+            <p>
+                Your trusted partner for energy solutions
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="service-icon">✓</div>
+
+                <h3>Quality Products</h3>
+
+                <p>
+                    We focus on reliable and quality
+                    energy products.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="service-icon">⚡</div>
+
+                <h3>Reliable Solutions</h3>
+
+                <p>
+                    Solutions designed for dependable
+                    everyday performance.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="service-icon">🛠️</div>
+
+                <h3>Professional Support</h3>
+
+                <p>
+                    Installation guidance and customer
+                    support.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="service-icon">🌱</div>
+
+                <h3>Clean Energy</h3>
+
+                <p>
+                    Helping customers move toward
+                    sustainable energy.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Get in touch with Solar Express Solution
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+                    <a href="tel:+8801XXXXXXXXX">
+                        +880 1XXXXXXXXX
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>📧 Email</h3>
+
+                <p>
+                    <a href="mailto:info@example.com">
+                        info@example.com
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>📍 Address</h3>
+
+                <p>
+                    Your Company Address
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Solar Express Solution.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
